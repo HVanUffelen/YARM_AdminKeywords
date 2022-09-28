@@ -1,0 +1,28 @@
+{
+    "name": "yarm/adminkeywords",
+    "description": "An add-on for the YARM Reference Manager Application. Contains the admin tool(s) for keywords",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Herbert Van Uffelen",
+            "email": "herbert.van-uffelen@univie.ac.at"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Yarm\\AdminKeywords\\": "../YARM_Adminkeywords/src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yarm\\AdminKeywords\\AdminKeywordsServiceProvider"
+            ]
+        }
+    }
+}
