@@ -48,5 +48,6 @@
         {!! Form::close() !!}
     </div>
     @include('dlbt.add_edit.inc.keywordModal_inc')
+    @include('dlbt.shared.new_person_modal')
 
 @endsection
