@@ -39,7 +39,7 @@ class KeywordAdminController extends Controller
         $keyword = Keyword::find($id);
         if ($id != 0) $data['redirect'] = url()->previous() . '?page=' . ($current_page ?? 1);
         $data['keyword_to_clean'] = $keyword;
-        return view('dlbt.keyword.edit', $data);
+        return view('adminkeywords::edit', $data);
 
     }
 

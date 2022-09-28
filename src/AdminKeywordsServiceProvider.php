@@ -22,7 +22,7 @@ class AdminKeywordsServiceProvider extends ServiceProvider{
 
 
         //after every update
-        //run   php artisan vendor:publish [--provider="Yarm\AdminKeywords\AdminKeywordsServiceProvider"][--tag="adminkeywords"]  --force
+        //run   php artisan vendor:publish --provider="Yarm\AdminKeywords\AdminKeywordsServiceProvider" --tag="adminkeywords" --force
     }
 
     public function register()
