@@ -29,7 +29,7 @@ class KeywordAdminController extends Controller
         $paginationValue = PaginationController::getPaginationItemCount();
 
         $data['keywords'] = Keyword::orderBy('name', 'asc')->paginate($paginationValue);
-        return view('dlbt.keyword.table', $data);
+        return view('adminkeywords::table', $data);
 
     }
 
