@@ -1,5 +1,5 @@
 <?php
-Route::group(['namespace'=>'Yarm\AdminKeywords\Http\Controllers','prefix'=>'dlbt','middleware'=>['web']], function (){
+Route::group(['namespace'=>'Yarm\Adminkeywords\Http\Controllers','prefix'=>'dlbt','middleware'=>['web']], function (){
     Route::get('/keywords', 'KeywordAdminController@index')
         ->name('keywords');
     Route::get('/keywords/edit/{id}', 'KeywordAdminController@edit')
@@ -13,5 +13,3 @@ Route::group(['namespace'=>'Yarm\AdminKeywords\Http\Controllers','prefix'=>'dlbt
     Route::put('/keywords/updateAjax/{id}', 'KeywordAdminController@updateAjax')
         ->name('keywords.update-ajax');
 });
-
-
