@@ -9,7 +9,7 @@
         {{--        Todo --}}
         {{-- new keyword--}}
         <div class="table-responsive adminKeywordContent">
-            @include('dlbt.keyword.inc.table_data')
+            @include('adminkeywords::inc.table_data')
         </div>
 
     </div>
