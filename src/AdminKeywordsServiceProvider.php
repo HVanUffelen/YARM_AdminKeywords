@@ -15,7 +15,7 @@ class AdminKeywordsServiceProvider extends ServiceProvider{
         $this->mergeConfigFrom(__DIR__ . '/config/Adminkeywords.php','adminkeywords');
         $this->publishes([
             //__DIR__ . '/config/bookshelf.php' => config_path('bookshelf.php'),
-            __DIR__ . '/views' => resource_path('views/vendor/adminkeywords'),
+            //__DIR__ . '/views' => resource_path('views/vendor/adminkeywords'),
             // Assets
             __DIR__ . '/js' => resource_path('js/vendor'),
         ],'adminkeywords');
