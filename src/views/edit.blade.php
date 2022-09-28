@@ -20,7 +20,7 @@
         </div>
         <div class="card-body">
             {!! Form::open(['id' => 'keywordCleaning', 'action' => '\Yarm\Adminkeywords\Http\Controllers\KeywordAdminController@update', 'method' => 'PUT', 'enctype' => 'multipart/form-data']) !!}
-            @include('dlbt.keyword.inc.keyword_cleaning_inc')
+            @include('adminkeywords::inc.keyword_cleaning_inc')
             <div class="mt-3 pb-5">
                 {{Form::button("<i class='fa-solid fa-plus'></i>", ["type"=>"button", "id"=>"btn-add-field-keyword",
                         "class"=>"float-right mr-1 btn btn-success rounded-circle",
