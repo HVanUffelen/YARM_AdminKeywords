@@ -1,6 +1,6 @@
 <?php
 
-namespace Yarm\AdminKeywords;
+namespace Yarm\Adminkeywords;
 
 use Illuminate\Support\ServiceProvider;
 
