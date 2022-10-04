@@ -1,5 +1,5 @@
 <?php
-Route::group(['namespace'=>'Yarm\Adminkeywords\Http\Controllers','prefix'=>'dlbt','middleware'=>['web']], function (){
+Route::group(['namespace'=>'Yarm\Adminkeywords\Http\Controllers','prefix'=> strtolower(config('yarm.sys_name')),'middleware'=>['web']], function (){
     Route::get('/keywords', 'KeywordAdminController@index')
         ->name('keywords');
     Route::get('/keywords/edit/{id}', 'KeywordAdminController@edit')

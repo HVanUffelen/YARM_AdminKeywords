@@ -11,7 +11,7 @@
                    data-content="@lang('Keyword Cleaning manual info...')"><i
                         class="fa fa-info-circle"
                         style="color: grey"></i></a>
-                <a href="{{url('dlbt/keywords/edit/0')}}" class="btn btn-danger rounded-circle float-right"
+                <a href="{{url(strtolower(config('yarm.sys_name')) .'/keywords/edit/0')}}" class="btn btn-danger rounded-circle float-right"
                    data-placement="top" data-toggle="popover"
                    data-trigger="hover" data-content="@lang('Clear and refresh form')">
                     <i class="fa-solid fa-arrows-rotate"></i>
@@ -47,7 +47,7 @@
         {!! Form::hidden('redirect', $redirect??'', ['id' => 'redirect']) !!}
         {!! Form::close() !!}
     </div>
-    @include('dlbt.add_edit.inc.keywordModal_inc')
-    @include('dlbt.shared.new_person_modal')
+    @include('ydbviews.add_edit.inc.keywordModal_inc')
+    @include('ydbviews.shared.new_person_modal')
 
 @endsection

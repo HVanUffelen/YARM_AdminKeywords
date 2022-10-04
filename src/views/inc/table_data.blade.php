@@ -18,11 +18,11 @@
             <td>{{ $keyword->name.(($keyword->name_id!=null)?' (Ps)':'')  }}</td>
             <td class="text-center">{{ $keyword->refs()->count() }}</td>
             <td>
-                <form action="/dlbt/keywords/delete/{{ $keyword->id }}" method="post">
+                <form action="/{{strtolower(config('yarm.sys_name'))}}/keywords/delete/{{ $keyword->id }}" method="post">
                     @method('delete')
                     @csrf
                     <div class="btn-group btn-group-sm">
-                        <a href="/dlbt/keywords/edit/{{ $keyword->id.'&p'.$keywords->currentPage()}}" class="btn btn-outline-success border-0"
+                        <a href="'/' . strtolower(config('yarm.sys_name')) .'/keywords/edit/{{ $keyword->id.'&p'.$keywords->currentPage()}}" class="btn btn-outline-success border-0"
                            data-toggle="tooltip"
                            title="Clean {{ $keyword->name }}">
                             <i class="fa-solid fa-brush"></i>
@@ -49,6 +49,6 @@
     {{$keywords->count()==0? __('0 result found')  :''}}
     </tbody>
 </table>
-@include('dlbt.add_edit.inc.keywordModal_inc')
+@include('ydbviews.add_edit.inc.keywordModal_inc')
 
 

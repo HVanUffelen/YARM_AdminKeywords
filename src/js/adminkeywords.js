@@ -208,7 +208,7 @@
                         $('#redirect').val('1');
                         $('#newKeywordForm').trigger("reset");
                         $('#keywordModal').modal('hide');
-                        window.location.href = YARM.base_url+'/dlbt/keywords?page='+redirect;
+                        window.location.href = YARM.base_url + '/' + YARM.sys_name + '/keywords?page='+redirect;
 
                     }
                 });
@@ -227,7 +227,7 @@
         });
 
         //create new person
-        if(window.location.href.includes('/dlbt/adminTables?Model=name&s=k')) $('#create-new').click();
+        if(window.location.href.includes('/' + YARM.sys_name + '/adminTables?Model=name&s=k')) $('#create-new').click();
 
         //helping vars
         var loader = '<div class="spinner-border text-primary m-auto" role="status">\n' +

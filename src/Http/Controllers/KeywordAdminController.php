@@ -66,7 +66,7 @@ class KeywordAdminController extends Controller
                 ->with('alert-success', __('Changes successfully saved'));
         }
 
-        return redirect('/dlbt/keywords/edit/0')
+        return redirect('/' . strtolower(config('yarm.sys_name')) . '/keywords/edit/0')
             ->with('alert-success', __('Changes successfully saved'));
     }
 
@@ -202,7 +202,7 @@ class KeywordAdminController extends Controller
             $keyword->refs()->detach();
             $keyword->delete();
             session()->flash('success', "The keyword <b>$keyword->name</b> has been deleted!");
-            return redirect('dlbt/keywords?page=' . $page);
+            return redirect(strtolower(config('yarm.sys_name')) .'/keywords?page=' . $page);
         } catch (\Throwable $e) {
             return back()->with('alert-danger', $e->getMessage());
         }

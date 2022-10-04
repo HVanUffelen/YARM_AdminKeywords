@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <h2>Keywords</h2>
-        @include('dlbt.shared.filter_box_inc')
+        @include('ydbviews.shared.filter_box_inc')
         {{--        Todo --}}
         {{-- new keyword--}}
         <div class="table-responsive adminKeywordContent">
