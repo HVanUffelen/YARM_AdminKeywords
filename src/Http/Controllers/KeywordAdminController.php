@@ -1,6 +1,6 @@
 <?php
 
-namespace Yarm\AdminKeywords\Http\Controllers;
+namespace Yarm\Adminkeywords\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\KeywordController;
