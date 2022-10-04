@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yarm\\AdminKeywords\\": "../YARM_Adminkeywords/src/"
+            "Yarm\\Adminkeywords\\": "src/"
         }
     },
     "extra": {
