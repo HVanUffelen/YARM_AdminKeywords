@@ -2,6 +2,6 @@
 
 return [
 
-  'adminkeywords_present' => "True"
+  'adminkeywords_present' => true
 
 ];
