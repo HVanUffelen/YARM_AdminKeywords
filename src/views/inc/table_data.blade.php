@@ -22,7 +22,7 @@
                     @method('delete')
                     @csrf
                     <div class="btn-group btn-group-sm">
-                        <a href="'/' . strtolower(config('yarm.sys_name')) .'/keywords/edit/{{ $keyword->id.'&p'.$keywords->currentPage()}}" class="btn btn-outline-success border-0"
+                        <a href="{{'/'.strtolower(config('yarm.sys_name')).'/keywords/edit/'.$keyword->id.'&p'.$keywords->currentPage()}}" class="btn btn-outline-success border-0"
                            data-toggle="tooltip"
                            title="Clean {{ $keyword->name }}">
                             <i class="fa-solid fa-brush"></i>
