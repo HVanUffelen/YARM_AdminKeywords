@@ -93,6 +93,21 @@ class KeywordAdminController extends Controller
         return $success;
     }
 
+    public function keywordFetch_data(Request $request)
+    {
+        $paginationValue = PaginationController::getPaginationItemCount();
+        if ($request->ajax()) {
+            $q = $request->get('query');
+            $q = str_replace(" ", "%", $q);
+            $modelName = strtolower($request->get('type'));
+            if ($modelName == 'keywords_crud') {
+                $data['keywords'] = Keyword::where('translation', 'like', '%' . $q . '%')
+                    ->orderBy('name', 'asc')->paginate($paginationValue);
+                return view('dlbt.keyword.inc.table_data.blade.php', $data);
+            }
+        }
+    }
+
     private static function splitKeyword($request)
     {
 //        todo lang
