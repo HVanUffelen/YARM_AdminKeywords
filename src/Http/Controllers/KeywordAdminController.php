@@ -103,7 +103,7 @@ class KeywordAdminController extends Controller
             if ($modelName == 'keywords_crud') {
                 $data['keywords'] = Keyword::where('translation', 'like', '%' . $q . '%')
                     ->orderBy('name', 'asc')->paginate($paginationValue);
-                return view('adminkeywords::inc.table_data.blade.php', $data);
+                return view('adminkeywords::inc.table_data', $data);
             }
         }
     }
