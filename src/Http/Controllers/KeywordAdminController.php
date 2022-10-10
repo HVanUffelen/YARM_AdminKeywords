@@ -96,12 +96,12 @@ class KeywordAdminController extends Controller
         if ($request->ajax()) {
             $q = $request->get('query');
             $q = str_replace(" ", "%", $q);
-            $modelName = strtolower($request->get('type'));
-            if ($modelName == 'keywords_crud') {
+            //$modelName = strtolower($request->get('type'));
+            //if ($modelName == 'keywords_crud') {
                 $data['keywords'] = Keyword::where('translation', 'like', '%' . $q . '%')
                     ->orderBy('name', 'asc')->paginate($paginationValue);
                 return view('adminkeywords::inc.table_data', $data);
-            }
+            //}
         }
     }
 
