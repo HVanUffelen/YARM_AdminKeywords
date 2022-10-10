@@ -93,7 +93,7 @@ class KeywordAdminController extends Controller
         return $success;
     }
 
-    public function keywordFetch_data(Request $request)
+    public function keywordFetch_datax (Request $request)
     {
 
         $paginationValue = PaginationController::getPaginationItemCount();

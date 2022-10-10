@@ -12,6 +12,6 @@ Route::group(['namespace'=>'Yarm\Adminkeywords\Http\Controllers','prefix'=> strt
         ->name('keywords.edit-ajax');
     Route::put('/keywords/updateAjax/{id}', 'KeywordAdminController@updateAjax')
         ->name('keywords.update-ajax');
-    Route::get('/keywordFetch_data', 'KeywordAdminController@keywordFetch_data')
+    Route::get('/keywordFetch_data', 'KeywordAdminController@keywordFetch_datax')
         ->name('keywordFetch-ajax');
 });
