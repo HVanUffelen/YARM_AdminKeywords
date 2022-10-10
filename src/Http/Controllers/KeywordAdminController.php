@@ -3,7 +3,6 @@
 namespace Yarm\Adminkeywords\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\KeywordController;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\ValidationController;
 use App\Models\Keyword;
@@ -21,8 +20,6 @@ class KeywordAdminController extends Controller
         $this->middleware('auth');
         $this->middleware('can:admin');
     }
-
-
 
     public function index()
     {
@@ -93,7 +90,7 @@ class KeywordAdminController extends Controller
         return $success;
     }
 
-    public function keywordFetch_datax (Request $request)
+    public function keywordFetch_Data ($request)
     {
 
         $paginationValue = PaginationController::getPaginationItemCount();
@@ -108,6 +105,8 @@ class KeywordAdminController extends Controller
             }
         }
     }
+
+
 
     private static function splitKeyword($request)
     {
