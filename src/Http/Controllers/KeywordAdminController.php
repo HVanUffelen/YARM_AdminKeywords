@@ -2,7 +2,6 @@
 
 namespace Yarm\Adminkeywords\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\ValidationController;
 use App\Models\Keyword;
@@ -92,7 +91,6 @@ class KeywordAdminController extends Controller
 
     public function keywordFetch_Data ($request)
     {
-
         $paginationValue = PaginationController::getPaginationItemCount();
         if ($request->ajax()) {
             $q = $request->get('query');
