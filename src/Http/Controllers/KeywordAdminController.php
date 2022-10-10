@@ -95,6 +95,7 @@ class KeywordAdminController extends Controller
 
     public function keywordFetch_data(Request $request)
     {
+
         $paginationValue = PaginationController::getPaginationItemCount();
         if ($request->ajax()) {
             $q = $request->get('query');
