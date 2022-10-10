@@ -2,6 +2,7 @@
 
 namespace Yarm\Adminkeywords\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\ValidationController;
 use App\Models\Keyword;
